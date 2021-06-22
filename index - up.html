@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<title>SuperCC</title>
+<link rel="icon" href="tb2.ico" type="image/x-icon">
+<link rel="shortcut icon" href="tb2.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<script src="http://blog-static.cnblogs.com/files/cpg123/jquery.min.js"></script>
+<link href="http://blog-static.cnblogs.com/files/cpg123/bootstrap.min.css" rel="stylesheet">
+<script src="http://blog-static.cnblogs.com/files/cpg123/bootstrap.min.js"></script>
+<script>
+    $(function() {
+        document.getElementById("in").focus();
+        $("#baidu").click(function () {
+            var s = document.getElementById("in").value
+            if(s == ""){
+                window.open("http://www.baidu.com")
+            }
+            else window.open("http://www.baidu.com/s?ie=UTF-8&wd=" +s)
+        });
+        $("#bing").click(function () {
+            var s = document.getElementById("in").value
+            if(s == ""){
+                window.open("http://cn.bing.com")
+            }
+            else window.open("https://cn.bing.com/search?q=" +s)
+        });
+        $("#zhihu").click(function () {
+            var s = document.getElementById("in").value
+            if(s == ""){
+                window.open("http://www.zhihu.com/hot")
+            }
+            else window.open("https://www.zhihu.com/search?type=content&q=" +s)
+        });
+        $("#taobao").click(function () {
+            var s = document.getElementById("in").value
+            if(s == ""){
+                window.open("https://s.taobao.com")
+            }
+            else window.open("https://s.taobao.com/search?q=" +s)
+        });
+        $("#jingdong").click(function () {
+            var s = document.getElementById("in").value
+            if(s == ""){
+                window.open("http://www.jd.com")
+            }
+            else window.open("https://search.jd.com/Search?keyword=" +s)
+        });
+        $("#bilibili").click(function () {
+            var s = document.getElementById("in").value
+            if(s == ""){
+                window.open("http://www.bilibili.com")
+            }
+            else window.open("https://search.bilibili.com/all?keyword=" +s)
+        });
+        $("#in").keydown(function () {
+            if(event.keyCode == 13) {
+                var s = document.getElementById("in").value
+                if(s == ""){
+                    window.open("http://www.baidu.com")
+                }
+                else window.open("http://www.baidu.com/s?ie=UTF-8&wd=" + s)
+            }
+        })
+    });
+</script>
+<style>
+    div{
+        width: 500px;
+        margin: 13% auto;
+        opacity:1;
+        text-align: center;
+    }
+</style>
+<body style='background-image: url("bac1.jpg"); background-repeat: no-repeat; background-size: cover; background-color: transparent;'>
+<div>
+    <input id = "in" type="text" class="form-control" placeholder="Search for ...">
+    <button id="baidu" class="btn btn-success" type="button">百度</button>
+    <button id="bing" class="btn btn-success" type="button">Bing</button>
+    <button id="bilibili" class="btn btn-success" type="button">B站</button>
+    <button id="zhihu" class="btn btn-success" type="button">知乎</button>
+    <button id="taobao" class="btn btn-success" type="button">淘宝</button>
+    <button id="jingdong" class="btn btn-success" type="button">京东</button>
+</div><!-- /input-group -->
+
+</body>
