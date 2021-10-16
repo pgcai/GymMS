@@ -1,4 +1,4 @@
-# 基于SSM的健身房管理系统
+# Gym management system based on SSM
 
 > The project was made in 2020-05-05~2020-05-10
 >
